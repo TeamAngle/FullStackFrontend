@@ -1,0 +1,20 @@
+@font-face {
+    font-family: liberation-sans;
+    src: url(http://fonts.cdnfonts.com/css/liberation-sans) format("truetype");
+  }
+
+.loginForm {
+    text-align: center;
+    margin-top:5%
+}
+
+h1 {
+    text-align: center;
+    margin-top:20%;
+    font-family: 'Liberation Sans', sans-serif;
+}
+
+label{
+    position: relative;
+    right: 2%;
+}
