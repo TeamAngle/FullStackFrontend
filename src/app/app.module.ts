@@ -9,9 +9,17 @@ import { RecipeComponent } from './components/recipe/recipe.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { ThankyouComponent } from './components/thankyou/thankyou.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 const approutes: Routes = [
-  {path: '', component: AppComponent}
+  {path: '', component: LoginComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'thankyou', component: ThankyouComponent},
+  {path: 'contact', component: ContactComponent}
 ]
 
 @NgModule({
@@ -20,12 +28,17 @@ const approutes: Routes = [
     // EmployeeComponent,
     RecipeComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent,
+    ContactComponent,
+    BlogsComponent,
+    ThankyouComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule//,
-    //RouterModule.forRoot(approutes)
+    HttpClientModule,
+    RouterModule.forRoot(approutes)
   ],
   providers: [/*EmployeeService*/],
   bootstrap: [AppComponent]
