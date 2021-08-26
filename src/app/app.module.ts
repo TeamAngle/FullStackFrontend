@@ -15,7 +15,10 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 
 const approutes: Routes = [
-  {path: '', component: AppComponent}
+  {path: '', component: LoginComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'thankyou', component: ThankyouComponent},
+  {path: 'contact', component: ContactComponent}
 ]
 
 @NgModule({
@@ -32,8 +35,8 @@ const approutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    HttpClientModule//,
-    //RouterModule.forRoot(approutes)
+    HttpClientModule,
+    RouterModule.forRoot(approutes)
   ],
   providers: [/*EmployeeService*/],
   bootstrap: [AppComponent]
