@@ -10,10 +10,22 @@ body {
     background-size: cover;
 }
 
+.login {
+    height: 22px;
+    width: 12%;
+}
+
+.login-button {
+    margin-top: 0.25%;
+    height: 22px;
+    width: 5%;
+}
+
 .loginForm {
     color: rgb(250, 253, 237);
     text-align: center;
     margin-top: 4%
+
 }
 
 h1 {
@@ -25,10 +37,11 @@ h1 {
     text-shadow: 0px -5px 20px black;
 }
 
-label{
+label {
+    position: relative;
+    right: 4%;
+    font-size: 100%;
     color: rgb(250, 253, 237);
     text-shadow: 0px 0px 10px black;
     font-family: 'UnJamoBatang', sans-serif;
-    position: relative;
-    right: 2%;
 }
