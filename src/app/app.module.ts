@@ -13,6 +13,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 const approutes: Routes = [
   {path: '', component: AppComponent}
@@ -28,7 +29,8 @@ const approutes: Routes = [
     AboutComponent,
     ContactComponent,
     BlogsComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
