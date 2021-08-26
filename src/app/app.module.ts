@@ -9,6 +9,7 @@ import { RecipeComponent } from './components/recipe/recipe.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 
 const approutes: Routes = [
   {path: '', component: AppComponent}
@@ -20,7 +21,8 @@ const approutes: Routes = [
     // EmployeeComponent,
     RecipeComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
