@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { ThankyouComponent } from './components/thankyou/thankyou.component';
 
 const approutes: Routes = [
   {path: '', component: AppComponent}
@@ -26,7 +27,8 @@ const approutes: Routes = [
     HeaderComponent,
     AboutComponent,
     ContactComponent,
-    BlogsComponent
+    BlogsComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,
