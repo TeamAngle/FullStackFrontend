@@ -1,20 +1,29 @@
+.banner {
+    height: 500px;
+    background: url(https://c8.alamy.com/comp/TB2Y8M/border-leaves-of-fern-and-tropical-friuts-orange-lemon-lime-on-punchy-yellow-top-view-and-space-for-text-summer-travel-concept-TB2Y8M.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 8%;
+    margin-top: -0.5%;
+    font-size: 400%;
+    font-family: 'UnPenheulim', sans-serif;
+    text-shadow: -5px 0px 10px rgb(255, 250, 244);
+}
+
 body {
     background-color: rgb(255, 250, 244);
+    margin-top: -12%;
     margin-left: 13%;
     margin-right: 13%;
 }
 
-.aboutHeader {
-    text-align: center;
-    padding-top: 5%;
-    margin-top: -0.5%;
-    font-family: 'UnJamoBatang', sans-serif;
-}
-
 .aboutSection {
     text-align: center;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 7%;
+    margin-bottom: 4%;
     font-size: large;
     padding-bottom: 3%;
     font-family: 'UnJamoBatang', sans-serif;
@@ -40,10 +49,4 @@ body {
     border: 3px;
     border-color: black;
     border-style: solid;
-}
-
-.banner {
-    height: 200px;
-    background: url(https://c8.alamy.com/comp/TB2Y8M/border-leaves-of-fern-and-tropical-friuts-orange-lemon-lime-on-punchy-yellow-top-view-and-space-for-text-summer-travel-concept-TB2Y8M.jpg);
-    background-size: cover;
 }
