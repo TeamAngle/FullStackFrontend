@@ -1,0 +1,8 @@
+img {
+    /* display: inline-block; */
+    float: right;
+}
+
+.contactForm {
+    display: inline-block;
+}
