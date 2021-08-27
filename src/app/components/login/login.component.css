@@ -5,7 +5,7 @@ body {
     margin-left: -1%;
     margin-right: -1%;
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 4%;
     background-image: url(https://c.stocksy.com/a/QDR400/z9/1057932.jpg);
     background-size: cover;
 }
@@ -44,4 +44,13 @@ label {
     color: rgb(250, 253, 237);
     text-shadow: 0px 0px 10px black;
     font-family: 'UnJamoBatang', sans-serif;
+}
+
+p {
+    margin-top: 2%;
+    text-shadow: 0px 0px 20px black;
+}
+
+a {
+    color: rgb(143, 204, 103);
 }
