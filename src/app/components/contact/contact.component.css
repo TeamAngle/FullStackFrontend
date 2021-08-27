@@ -1,8 +1,65 @@
-.rightSide {
-    /* display: inline-block; */
-    float: right;
+
+.contactHeader {
+    margin-top: 25%;
+    margin-left: 13%;
+    font-size: 400%;
+    font-family: "UnJamoBatang", sans-serif;
 }
 
 .contactForm {
     display: inline-block;
+    margin-top: -2%;
+    margin-left: 9%;
+    padding-right: 18%;
+    padding-bottom: 8.8%;
+    font-family: "UnJamoBatang", sans-serif;
+    color: rgba(66, 40, 32, 0.945);
+    background-color: rgba(248, 252, 214, 0.911);
+}
+
+.contactField {
+    margin-top: 18%;
+    margin-left: 5%;
+}
+
+label {
+    font-size: 150%;
+    margin-left: 10%;
+}
+
+input {
+    margin-top: 2%;
+    margin-left: 10%;
+    height: 22px;
+    width: 60%;
+    color: rgba(66, 40, 32, 0.945)
+}
+
+textarea {
+    margin-top: 2%;
+    margin-left: 10%;
+    height: 150px;
+    width: 141%;
+    font-size: large;
+    color: rgba(66, 40, 32, 0.945);
+}
+
+.submit-button {
+    margin-top: 5%;
+    margin-left: 136%;
+    height: 30px;
+    width: 80px;
+    color: rgba(66, 40, 32, 0.945);
+}
+
+.rightSide {
+    /* display: inline-block; */
+    float: right;
+    position: relative;
+}
+
+img {
+    margin-top: -5%;
+    position: relative;
+    width: 99%;
 }
