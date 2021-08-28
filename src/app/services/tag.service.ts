@@ -12,19 +12,23 @@ export class TagService {
 
   constructor(private http: HttpClient) { }
 
-  public getRecipes(): Observable<Tag[]> {
+  public getTags(): Observable<Tag[]> {
     return this.http.get<Tag[]>(`${this.apiServerUrl}/recipeController/read`);
   }
 
-  public addRecipe(tag: Tag): Observable<Tag> {
+  public getTag(tagId: number): Observable<Tag> {
+    return this.http.get<Tag>(`${this.apiServerUrl}/recipeController/read/${tagId}`);
+  }
+
+  public addTag(tag: Tag): Observable<Tag> {
     return this.http.post<Tag>(`${this.apiServerUrl}/recipeController/create`, tag)
   }
 
-  public updateRecipe(tag: Tag, tagId: number): Observable<Tag> {
+  public updateTag(tag: Tag, tagId: number): Observable<Tag> {
     return this.http.put<Tag>(`${this.apiServerUrl}/recipeController/update/${tagId}`, tag);
   }
 
-  public deleteRecipe(tagId: number) : Observable<void> {
+  public deleteTag(tagId: number) : Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/recipeController/delete/${tagId}`);
   }
 }

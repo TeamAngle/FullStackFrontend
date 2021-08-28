@@ -16,6 +16,10 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NewuserComponent } from './components/newuser/newuser.component';
+import { RecipeService } from './services/recipe.service';
+import { UserService } from './services/user.service';
+import { TagService } from './services/tag.service';
+import { BlogPostService } from './services/blog-post.service';
 
 const approutes: Routes = [
   {path: '', component: LoginComponent},
@@ -45,7 +49,7 @@ const approutes: Routes = [
     FormsModule,
     RouterModule.forRoot(approutes)
   ],
-  providers: [/*EmployeeService*/],
+  providers: [RecipeService, UserService, TagService, BlogPostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
