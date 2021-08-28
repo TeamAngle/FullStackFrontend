@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(){
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "#7ea381";
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "#8ca37e";
   }
 
   // public getEmployees(): void {

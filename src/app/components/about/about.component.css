@@ -1,21 +1,22 @@
 .banner {
-    height: 500px;
-    background: url(https://c8.alamy.com/comp/TB2Y8M/border-leaves-of-fern-and-tropical-friuts-orange-lemon-lime-on-punchy-yellow-top-view-and-space-for-text-summer-travel-concept-TB2Y8M.jpg);
+    height: 50vh;
+    background: url(https://805019.smushcdn.com/1588826/wp-content/uploads/2021/03/vegan-pie-recipes-1-scaled.jpg?lossy=0&strip=1&webp=1);
     background-size: cover;
 }
 
 h1 {
     text-align: center;
-    padding-top: 8%;
+    padding-top: 15vh;
     margin-top: -0.5%;
-    font-size: 400%;
+    font-size: 9vh;
     font-family: 'UnPenheulim', sans-serif;
     text-shadow: -5px 0px 10px rgb(255, 250, 244);
 }
 
 body {
     background-color: rgb(255, 250, 244);
-    margin-top: -12%;
+    position: relative;
+    margin-top: -20vh;
     margin-left: 13%;
     margin-right: 13%;
 }
@@ -24,8 +25,8 @@ body {
     text-align: center;
     margin-top: 7%;
     margin-bottom: 4%;
-    font-size: large;
-    padding-bottom: 3%;
+    font-size: 2vh;
+    padding-bottom: 2%;
     font-family: 'UnJamoBatang', sans-serif;
 }
 
@@ -42,7 +43,7 @@ body {
 
 .border-bottom {
     position: relative;
-    top: -30px;
+    top: -50px;
     width: 60%;
     left: 20%;
     right: 10%;
@@ -50,3 +51,4 @@ body {
     border-color: black;
     border-style: solid;
 }
+
