@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   title = 'employeemanagerapp';
   // public employees: Employee[];
   public recipes: Recipe[];
-  public user: User;
+  public user: User = {name: 'Not Logged In', id: null, password: null};
   public users: User[];
 
   constructor( 
