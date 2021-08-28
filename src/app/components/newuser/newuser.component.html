@@ -1,18 +1,24 @@
-<div>
-<h3>Create a new user account</h3>
-<p>New users must provide a username, password and email account.</p>
-<p>Usernames must be unique, and only one user account may be associated with one email</p>
-<br>
-<p>Please enter your user data into the form below</p>
-</div>
-<div id="newUserForm">
-    <form (ngSubmit)="onSubmit()">
-        <label for="username">Username</label><br>
-        <input type="text" name="username" [(ngModel)]="name"><br><br>
-        <label for="email">Email Address</label><br>
-        <input type="text" name="email" [(ngModel)]="email"><br><br>
-        <label for="password">Password</label><br>
-        <input type="password" name="password" [(ngModel)]="password"><br><br>
-        <input class="login-button" type="submit" value="Create Account">
-    </form>
-</div>
+<style>
+    @import url('http://fonts.cdnfonts.com/css/unjamobatang');
+</style>
+<html>
+    <img src="https://www.workshops-popup.com/wpp-archive/uploads/2018/03/S0597064-red-2.jpg" alt="lemons and spices">
+<body>
+    <div class="newUserBody">
+    <h3>Create a new user account</h3>
+    <br>
+    <p>Please enter your user data into the form below</p>
+    </div>
+    <div class="newUserForm">
+        <form (ngSubmit)="onSubmit()">
+            <label for="username">Username</label><br>
+            <input type="text" name="username" [(ngModel)]="name"><br><br>
+            <label for="email">Email Address</label><br>
+            <input type="text" name="email" [(ngModel)]="email"><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" [(ngModel)]="password"><br><br>
+            <input class="login-button" type="submit" value="Create Account">
+        </form>
+    </div>
+</body>
+</html>
