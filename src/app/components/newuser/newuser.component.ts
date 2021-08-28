@@ -28,6 +28,11 @@ export class NewuserComponent implements OnInit {
       alert("Please fill out all fields");
       return;
     }
+
+    if(!this.validPassword()){
+      alert("Password must contain at least 8 characters, one number and one special character");
+      return;
+    }
     
     let user = <User> {
       name: this.name,
@@ -52,4 +57,9 @@ export class NewuserComponent implements OnInit {
     this.password.length > 0;
   }
 
+  validPassword(): boolean {
+    let pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+    let reg = new RegExp(pattern);
+    return reg.test(this.password);
+  }
 }
