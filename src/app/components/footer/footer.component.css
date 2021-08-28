@@ -1,7 +1,18 @@
 #footernav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     display: inline;
     list-style: none;
+    color: rgb(245, 238, 229);
 }
 li{
     display: inline;
+    padding-left: 5vh;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(245, 238, 229);
 }
