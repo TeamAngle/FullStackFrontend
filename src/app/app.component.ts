@@ -6,6 +6,7 @@ import { RecipeService } from './services/recipe.service';
 import { UserService } from './services/user.service';
 import { BlogPostService } from './services/blog-post.service';
 import { TagService } from './services/tag.service';
+import { BlogPost } from './blogPost';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   public recipes: Recipe[];
   public user: User = {name: 'Not Logged In', id: null, password: null};
   public users: User[];
+  public blogs: BlogPost[];
 
   constructor( 
     private recipeService: RecipeService,
@@ -31,6 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     //this.getEmployees();
     //this.getRecipes();
     this.getUsers();
+    this.getBlogPosts();
   }
 
   ngAfterViewInit(){
@@ -88,6 +91,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     
   }
 
+
   public getUser(userId: number, cb): void {
     this.userService.getUser(userId).subscribe(
       (response: User) => {
@@ -110,6 +114,16 @@ export class AppComponent implements OnInit, AfterViewInit{
     }
     return false;
   }
+  public getBlogPosts(): void {
+    this.blogPostService.getBlogPosts().subscribe(
+      (response: BlogPost[]) => {
+        this.blogs = response;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message)
+      }
+    )
 
+  }
 
 }
