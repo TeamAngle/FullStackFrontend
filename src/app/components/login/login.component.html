@@ -4,11 +4,11 @@
 <body>
   <h1>Sublime Kitchen</h1>
 <div class="loginForm">
-    <form >
+    <form (ngSubmit)="onSubmit()">
       <label for="uname">Username</label><br>
-      <input class="login" type="text" name="username"><br><br>
+      <input class="login" type="text" name="username" [(ngModel)]="username"><br><br>
       <label for="password">Password</label><br>
-      <input class="login" type="password" name="password"><br><br>
+      <input class="login" type="password" name="password" [(ngModel)]="password"><br><br>
       <input class="login-button" type="submit" value="Login">
     </form>
     <p>First time user? Click <a routerLink="newuser">here</a> to create a new account </p>
