@@ -53,4 +53,6 @@ input {
     margin-top: 1%;
     height: 3vh;
     width: fit-content;
+    background-color: #7ea381;
+    color: rgb(255, 255, 249);
 }
