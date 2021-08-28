@@ -12,19 +12,23 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  public getRecipes(): Observable<User[]> {
+  public getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.apiServerUrl}/userController/read`);
   }
 
-  public addRecipe(user: User): Observable<User> {
+  public getUser(userId: number): Observable<User> {
+    return this.http.get<User>(`${this.apiServerUrl}/userController/read/${userId}`)
+  }
+
+  public addUser(user: User): Observable<User> {
     return this.http.post<User>(`${this.apiServerUrl}/userController/create`, user)
   }
 
-  public updateRecipe(user: User, userId: number): Observable<User> {
+  public updateUser(user: User, userId: number): Observable<User> {
     return this.http.put<User>(`${this.apiServerUrl}/userController/update/${userId}`, user);
   }
 
-  public deleteRecipe(userId: number) : Observable<void> {
+  public deleteUser(userId: number) : Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/userController/delete/${userId}`);
   }
 }

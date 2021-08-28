@@ -17,6 +17,10 @@ export class RecipeService {
     return this.http.get<Recipe[]>(`${this.apiServerUrl}/recipeController/read`);
   }
 
+  public getRecipe(recipeId: number): Observable<Recipe> {
+    return this.http.get<Recipe>(`${this.apiServerUrl}/recipeController/read/${recipeId}`);
+  }
+
   public addRecipe(recipe: Recipe): Observable<Recipe> {
     return this.http.post<Recipe>(`${this.apiServerUrl}/recipeController/create`, recipe)
   }
