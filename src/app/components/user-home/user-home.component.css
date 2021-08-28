@@ -1,0 +1,10 @@
+#bloglist div{
+display: inline-block;
+}
+#userinfo div{
+display: inline-block;
+}
+#userlist ul{
+    list-style: none;
+    display: inline;
+}

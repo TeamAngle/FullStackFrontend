@@ -20,13 +20,16 @@ import { RecipeService } from './services/recipe.service';
 import { UserService } from './services/user.service';
 import { TagService } from './services/tag.service';
 import { BlogPostService } from './services/blog-post.service';
+import { UserHomeComponent } from './components/user-home/user-home.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const approutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'about', component: AboutComponent},
   {path: 'thankyou', component: ThankyouComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'newuser', component: NewuserComponent}
+  {path: 'newuser', component: NewuserComponent},
+  {path: 'userhome', component:UserHomeComponent}
 ]
 
 @NgModule({
@@ -41,7 +44,9 @@ const approutes: Routes = [
     BlogsComponent,
     ThankyouComponent,
     SidebarComponent,
-    NewuserComponent
+    NewuserComponent,
+    UserHomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
