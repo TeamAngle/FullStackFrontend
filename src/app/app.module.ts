@@ -29,7 +29,8 @@ const approutes: Routes = [
   {path: 'thankyou', component: ThankyouComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'newuser', component: NewuserComponent},
-  {path: 'userhome', component:UserHomeComponent}
+  {path: 'userhome', component:UserHomeComponent},
+  {path: 'create', component:BlogsComponent}
 ]
 
 @NgModule({
