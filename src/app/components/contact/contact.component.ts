@@ -12,4 +12,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(): void {
+    window.location.replace("/thankyou");
+  }
 }
