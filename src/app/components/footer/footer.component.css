@@ -1,12 +1,18 @@
+
 #footernav {
     position: fixed;
+    margin-bottom: 0%;
     left: 0;
     bottom: 0;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: inline;
     list-style: none;
     color: rgb(245, 238, 229);
+    background-color: #8ca37e;
 }
+
 li{
     display: inline;
     padding-left: 5vh;
