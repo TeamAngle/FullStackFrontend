@@ -10,12 +10,21 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./user-home.component.css']
 })
 export class UserHomeComponent implements OnInit {
-  
+  blogList: BlogPost[];
 
   constructor(
     public app: AppComponent) { }
 
   ngOnInit() {
+  }
+
+  private filterBlogs(): void {
+    this.blogList = [];
+    for(let blog of this.app.blogs){
+      if(blog.user.id === this.app.user.id){
+        this.blogList.push(blog)
+      }
+    }
   }
 
 
