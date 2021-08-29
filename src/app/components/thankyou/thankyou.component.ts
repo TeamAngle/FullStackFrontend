@@ -8,9 +8,10 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class ThankyouComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
+  goBack() {
+    history.go(-1);
+  }
 }
