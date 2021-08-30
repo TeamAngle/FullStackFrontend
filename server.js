@@ -10,10 +10,10 @@ const express = require('express');
 const app = express();
 
 app.use(requireHTTPS);
-app.use(express.static('./dist/FullStackFrontend'));
+app.use(express.static('./dist/employeemanagerapp'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/FullStackFrontend/'}),
+    res.sendFile('index.html', {root: 'dist/employeemanagerapp/'}),
 );
 
 app.listen(process.env.PORT || 8000);
