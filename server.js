@@ -16,6 +16,6 @@ app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/employeemanagerapp/'}),
 );
 
-app.listen(process.env.PORT || 4200);
+app.listen(process.env.PORT || 8080);
 
 // test test
