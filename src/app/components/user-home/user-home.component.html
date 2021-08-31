@@ -1,22 +1,10 @@
 <app-header></app-header>
-<div id="bloglist">
-<ul>
-    <li id="userblogs" *ngFor="let blog of this.app.blogs"><img src="#" alt="blogpost"></li>
-</ul>
-</div>
-<div id="userinfo">
-    <span><img src="#" alt="userphoto"></span> <span> {{ app.user.name }}</span> <!--this will change to user name that is entered at login-->
-    <br><br>
-    <nav id="info">
-        <ul id="userlist">
-            <li>Name</li>
-            <br>
-            <li>Birthday</li>
-            <br>
-            <li>Quote</li>
-            <br>
-            <li>About User</li>
+<body>
+    <div id="bloglist">
+        <ul>
+            <li id="userblogs" *ngFor="let blog of this.app.blogs"><img src="#" alt="blogpost"></li>
         </ul>
-    </nav>
-</div>
+    </div>
+    <app-sidebar-user></app-sidebar-user>
+</body>
 <app-footer></app-footer>

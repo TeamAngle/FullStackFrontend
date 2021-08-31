@@ -22,6 +22,7 @@ import { TagService } from './services/tag.service';
 import { BlogPostService } from './services/blog-post.service';
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SidebarUserComponent } from './components/sidebar-user/sidebar-user.component';
 
 const approutes: Routes = [
   {path: '', component: LoginComponent},
@@ -47,7 +48,8 @@ const approutes: Routes = [
     SidebarComponent,
     NewuserComponent,
     UserHomeComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarUserComponent
   ],
   imports: [
     BrowserModule,
