@@ -23,6 +23,7 @@ import { BlogPostService } from './services/blog-post.service';
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
+import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.component';
 
 const approutes: Routes = [
   {path: '', component: LoginComponent},
@@ -50,7 +51,8 @@ const approutes: Routes = [
     NewuserComponent,
     UserHomeComponent,
     FooterComponent,
-    BlogPageComponent
+    BlogPageComponent,
+    UserSidebarComponent
   ],
   imports: [
     BrowserModule,
