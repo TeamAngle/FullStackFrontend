@@ -5,4 +5,5 @@ export interface BlogPost {
     title: string;
     imageUrl: string;
     user: User;
+    content: string;
 }

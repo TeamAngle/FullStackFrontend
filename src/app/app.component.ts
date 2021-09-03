@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     //this.getEmployees();
     //this.getRecipes();
     this.getUsers();
-    this.getBlogPosts();
+    // this.getBlogPosts();
   }
 
   ngAfterViewInit(){

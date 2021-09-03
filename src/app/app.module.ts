@@ -22,6 +22,7 @@ import { TagService } from './services/tag.service';
 import { BlogPostService } from './services/blog-post.service';
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.component';
 
 const approutes: Routes = [
@@ -31,7 +32,8 @@ const approutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'newuser', component: NewuserComponent},
   {path: 'userhome', component:UserHomeComponent},
-  {path: 'create', component:BlogsComponent}
+  {path: 'create', component:BlogsComponent},
+  {path: 'blog/:id', component:BlogPageComponent}
 ]
 
 @NgModule({
@@ -49,6 +51,7 @@ const approutes: Routes = [
     NewuserComponent,
     UserHomeComponent,
     FooterComponent,
+    BlogPageComponent,
     UserSidebarComponent
   ],
   imports: [
