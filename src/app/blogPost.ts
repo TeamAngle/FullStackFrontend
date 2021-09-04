@@ -1,3 +1,4 @@
+import { Tag } from './tag';
 import { User } from './user';
 
 export interface BlogPost {
@@ -6,5 +7,5 @@ export interface BlogPost {
     imageUrl: string;
     user: User;
     content: string;
-    tags: string[];
+    tags: Tag[];
 }
