@@ -1,0 +1,17 @@
+<app-header></app-header>
+<form class="inputForm">
+    <label for="title">Post Title</label><br>
+    <input type="text" name="title" [(ngModel)]="title"><br><br>
+    <label for="tags">Tags</label><br>
+    <input type="text" name="tags" [(ngModel)]="tags" (ngModelChange)="convertToLowerCase($event)"><br><br>
+    <label for="image">Image Url</label><br>
+    <input type="text" name="imageUrl" [(ngModel)]="imgUrl"><br><br>
+    <img src="{{imgUrl}}"/><br>
+    <label for="body">Body</label><br>
+    <textarea rows="15" cols="70" id="multiLineInput" [(ngModel)]="body"></textarea><br><br>
+    <label for="recipe">Recipe Instructions</label><br>
+    <textarea rows="5" cols="40" id="multiLineInput" [(ngModel)]="recipe"></textarea><br>
+    <input type="submit" name="submit" (click)="onSubmit()">
+</form>
+<app-footer></app-footer>  
+

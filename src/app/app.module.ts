@@ -24,6 +24,7 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.component';
+import { CreateBlogComponent } from './components/create-blog/create-blog.component';
 
 const approutes: Routes = [
   {path: '', component: LoginComponent},
@@ -33,7 +34,8 @@ const approutes: Routes = [
   {path: 'newuser', component: NewuserComponent},
   {path: 'userhome', component:UserHomeComponent},
   {path: 'create', component:BlogsComponent},
-  {path: 'blog/:id', component:BlogPageComponent}
+  {path: 'blog/:id', component:BlogPageComponent},
+  {path: 'createblog', component:CreateBlogComponent}
 ]
 
 @NgModule({
@@ -52,7 +54,8 @@ const approutes: Routes = [
     UserHomeComponent,
     FooterComponent,
     BlogPageComponent,
-    UserSidebarComponent
+    UserSidebarComponent,
+    CreateBlogComponent
   ],
   imports: [
     BrowserModule,
