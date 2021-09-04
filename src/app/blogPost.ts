@@ -6,4 +6,5 @@ export interface BlogPost {
     imageUrl: string;
     user: User;
     content: string;
+    tags: string[];
 }
