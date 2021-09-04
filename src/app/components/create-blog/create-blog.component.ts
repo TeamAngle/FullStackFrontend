@@ -49,7 +49,7 @@ export class CreateBlogComponent implements OnInit {
       content: this.body,
       recipe: this.recipe,
       imageUrl: this.imgUrl,
-      tags: this.tags.split(','),
+      tags: this.createTags(),
       user: null
     }
 
@@ -71,18 +71,21 @@ export class CreateBlogComponent implements OnInit {
     let tagList = this.tags.split(',')
     let convertedTag = <Tag> {};
     let uniqueNames = this.tagList.map(tag => tag.name);
+
     for(let tag of tagList){
       if(uniqueNames.indexOf(tag) >= 0)
         continue;
 
       convertedTag = {id: 0, name:tag}
-      this.tagService.addTag(convertedTag)
+      this.tagService.addTag(convertedTag).subscribe(()=>{console.log('completed add tag')})
     }
   }
 
   getTags(){
     this.tagService.getTags().subscribe(
-      tags => this.tagList = tags
+      tags => {
+        this.tagList = tags;
+      }
     )
   }
 
@@ -92,6 +95,17 @@ export class CreateBlogComponent implements OnInit {
     this.body = "";
     this.imgUrl = "";
     this.recipe = "";
+  }
+
+  createTags(){
+    let tagNames: string[] = this.tags.split(',');
+    let tagList: Tag[] = [];
+    
+    tagNames.forEach(tagName => {
+      tagList.push({id: 0, name:tagName})
+    })
+
+    return tagList;
   }
 
 }
