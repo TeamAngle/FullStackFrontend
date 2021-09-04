@@ -1,0 +1,9 @@
+<label for="searchBar">Search post titles</label>
+<input type="text" name="searchbar" [(ngModel)]="searchText" (ngModelChange)="getMatchedBlogPosts()">
+<div *ngIf="matchedBlogPosts.length > 0">
+    <ol>
+        <ul *ngFor="let match of matchedBlogPosts">
+            <a routerLink="/blog/{{match.id}}">{{match.title}}</a>
+        </ul>
+    </ol>
+</div>
