@@ -1,5 +1,5 @@
 <app-header></app-header>
-<form action="">
+<!-- <form action="">
     <div id="title">
         <label for="title"></label>
         <input type="text" id="title" name="title" placeholder="Title"><br>
@@ -14,5 +14,10 @@
         <button>Add</button>
         <button>Submit</button>
     </span>
-</form>
+</form> -->
+<div *ngFor="let blog of this.blogs">
+    <h2><a routerLink="/blog/{{blog.id}}">{{blog.title}}</a></h2>
+    <img src="{{blog.imageUrl}}">
+    <br>
+</div>
 <app-footer></app-footer>
