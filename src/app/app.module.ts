@@ -33,7 +33,7 @@ const approutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'newuser', component: NewuserComponent},
   {path: 'userhome', component:UserHomeComponent},
-  {path: 'create', component:BlogsComponent},
+  {path: 'bloglist', component:BlogsComponent},
   {path: 'blog/:id', component:BlogPageComponent},
   {path: 'createblog', component:CreateBlogComponent}
 ]
