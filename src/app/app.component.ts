@@ -1,8 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
-import { Recipe } from './recipe';
 import { User } from './user';
-import { RecipeService } from './services/recipe.service';
 import { UserService } from './services/user.service';
 import { BlogPostService } from './services/blog-post.service';
 import { TagService } from './services/tag.service';
@@ -17,13 +15,12 @@ import { BlogPost } from './blogPost';
 export class AppComponent implements OnInit, AfterViewInit{
   title = 'employeemanagerapp';
   // public employees: Employee[];
-  public recipes: Recipe[];
+  // public recipes: Recipe[];
   public user: User = {name: 'Not Logged In', id: null, password: null};
   public users: User[];
   public blogs: BlogPost[];
 
   constructor( 
-    private recipeService: RecipeService,
     private userService: UserService,
     private blogPostService: BlogPostService,
     private tagService: TagService,
@@ -67,17 +64,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     );
   }
 
-  public getRecipes(): void {
-    this.recipeService.getRecipes().subscribe(
-      (response: Recipe[]) => {
-        this.recipes = response;
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message)
-      }
-    )
-    
-  }
+  
 
   public getUsers(): void {
     this.userService.getUsers().subscribe(
