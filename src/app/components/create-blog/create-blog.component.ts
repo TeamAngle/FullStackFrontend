@@ -52,6 +52,7 @@ export class CreateBlogComponent implements OnInit {
       tags: this.createTags(),
       user: null
     }
+    console.log(blogPost)
 
     return blogPost;
 
@@ -99,10 +100,10 @@ export class CreateBlogComponent implements OnInit {
 
   createTags(){
     let tagNames: string[] = this.tags.split(',');
-    let tagList: Tag[] = [];
+    let tagList = [];
     
     tagNames.forEach(tagName => {
-      tagList.push({id: 0, name:tagName})
+      tagList.push({name:tagName})
     })
 
     return tagList;
