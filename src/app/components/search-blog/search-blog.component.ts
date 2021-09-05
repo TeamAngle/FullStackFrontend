@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogPost } from 'src/app/blogPost';
 import { BlogPostService } from 'src/app/services/blog-post.service';
+import { TagService } from 'src/app/services/tag.service';
+import { Tag } from 'src/app/tag';
 
 @Component({
   selector: 'app-search-blog',
@@ -9,14 +11,29 @@ import { BlogPostService } from 'src/app/services/blog-post.service';
 })
 export class SearchBlogComponent implements OnInit {
   blogPosts: BlogPost[] = [];
+  tags: Tag[] = [];
   blogPostTitles: string[] = [];
+  tagnames: string[] = [];
   matchedBlogPosts: BlogPost[] = [];
   searchText: string;
+  searchByTag: boolean = true;
 
-  constructor(private blogPostService: BlogPostService) { }
+  constructor(private blogPostService: BlogPostService, private tagService: TagService) { }
 
   ngOnInit(): void {
     this.getBlogPosts()
+    this.getTags();
+  }
+
+  getTags(){
+    this.tagService.getTags().subscribe(
+      tags => {
+        this.tags = tags;
+        this.tagnames = this.tags.map(
+          tag => tag.name
+        )
+      }
+    )
   }
 
   getBlogPosts(){
@@ -27,11 +44,34 @@ export class SearchBlogComponent implements OnInit {
           post => post.title
         )
       }
-    
     )
   }
 
-  getMatchedBlogPosts(){
+  getMatchedBlogPosts() {
+    if(this.searchByTag){
+      this.getMatchByTag()
+    } else {
+      this.getMatchByTitle();
+    }
+  }
+
+  getMatchByTag(){
+    this.matchedBlogPosts = [];
+    if(this.searchText.length == 0)
+      return;
+
+    let searchTerms = this.searchText.trim().split(' ');
+    for(let tagname of this.tagnames){
+      for(let term of searchTerms){
+        if(tagname.toLowerCase().includes(term.toLowerCase())){
+          let tag = this.tags[this.tagnames.indexOf(tagname)];
+          tag.blogPosts.forEach(post => this.matchedBlogPosts.push(post))
+        }
+      }
+    }
+  }
+
+  getMatchByTitle(){
     console.log('running matched blog posts')
     this.matchedBlogPosts = [];
     if(this.searchText.length == 0)
@@ -47,6 +87,11 @@ export class SearchBlogComponent implements OnInit {
         }
       }
     }
+  }
+
+  toggleSearchByTag(){
+    console.log('hitting radio button')
+    this.searchByTag = !this.searchByTag;
   }
 
 }

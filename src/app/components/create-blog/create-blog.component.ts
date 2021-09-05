@@ -70,14 +70,14 @@ export class CreateBlogComponent implements OnInit {
 
   addTags(){
     let tagList = this.tags.split(',')
-    let convertedTag = <Tag> {};
+    let convertedTag = <any> {};
     let uniqueNames = this.tagList.map(tag => tag.name);
 
     for(let tag of tagList){
       if(uniqueNames.indexOf(tag) >= 0)
         continue;
 
-      convertedTag = {id: 0, name:tag}
+      convertedTag = {name:tag}
       this.tagService.addTag(convertedTag).subscribe(()=>{console.log('completed add tag')})
     }
   }
