@@ -1,0 +1,65 @@
+.blog-body {
+    margin-bottom:60px;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    background-color: rgb(245, 242, 238);
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: -50vw;
+    left: 50%;
+    font-family: 'UnJamoBatang', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+}
+
+.title {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+img {
+    width: 40vw;
+    height: 40vw;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.body {
+    padding-top: 5%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 7vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3vh;
+    font-weight: 700;
+}
+
+h3 {
+    margin-left: 10%;
+    text-decoration: underline;
+}
+
+p {
+    white-space: pre-wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 20px;
+    font-size: 3vh;
+}
