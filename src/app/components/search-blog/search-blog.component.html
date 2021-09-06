@@ -1,7 +1,7 @@
 <app-header></app-header>
 <label for="searchByTag" name="searchByTag">Search By Tag</label>
     <input type="checkbox" name="searchByTag" [(ngModel)]="searchByTag" (ngModelChange)="searchText = ''">
-<label for="searchBar">Search post titles</label>
+<label for="searchBar">Search post <strong>{{searchByTag ? 'Tag': 'Title'}}</strong></label>
 <input type="text" name="searchbar" [(ngModel)]="searchText" (ngModelChange)="getMatchedBlogPosts()">
 <div *ngIf="matchedBlogPosts.length > 0">
     <ol>
