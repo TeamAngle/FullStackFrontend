@@ -128,9 +128,12 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   }
 
-  public setCurrentUser(userId: number, cb): void {
+  public setCurrentUser(userId: number, cb?): void {
     this.userService.updateCurrentUser({id: 0, userId: userId}).subscribe(
-      ()=> cb()
+      session => {
+        if(cb)
+          cb()
+      }
     )
   }
 

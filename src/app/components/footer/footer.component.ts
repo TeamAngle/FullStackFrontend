@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private app: AppComponent) { }
 
   ngOnInit(): void {
   }
 
+  getUserText(){
+    console.log(this.app.user)
+    return this.app.user.name == "Not Logged In" ? "Login" : 'Logout: ' + this.app.user.name
+  }
+
+  
+
+  onClick(){
+    console.log('clicked link')
+    if(this.app.user.name != "Not Logged In"){
+      this.app.setCurrentUser(0, ()=>{window.location.replace('')});
+    } else {
+      window.location.replace('')
+    }
+  }
 }
