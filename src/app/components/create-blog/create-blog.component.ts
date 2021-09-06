@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 import { BlogPost } from 'src/app/blogPost';
 import { BlogPostService } from 'src/app/services/blog-post.service';
 import { TagService } from 'src/app/services/tag.service';
@@ -17,7 +18,7 @@ export class CreateBlogComponent implements OnInit {
   tags:string = "";
   tagList: Tag[];
 
-  constructor(private tagService:TagService, private blogService:BlogPostService) { }
+  constructor(private tagService:TagService, private blogService:BlogPostService, private app: AppComponent) { }
 
   ngOnInit(): void {
     this.getTags();
@@ -50,7 +51,7 @@ export class CreateBlogComponent implements OnInit {
       recipe: this.recipe,
       imageUrl: this.imgUrl,
       tags: this.createTags(),
-      user: null
+      user: this.app.user 
     }
     console.log(blogPost)
 

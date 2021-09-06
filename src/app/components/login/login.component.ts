@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
         this.app.user = this.app.users[i];
         alert("Found that ass! You're the real deal!");
         console.log(this.app.user);
-        window.location.replace('userhome');
+        this.app.setCurrentUser(this.app.users[i].id, ()=>{window.location.replace('/userhome')})
         return;
       }
 

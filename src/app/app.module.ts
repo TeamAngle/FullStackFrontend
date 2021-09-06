@@ -39,6 +39,8 @@ const approutes: Routes = [
   {path: 'searchblogs', component:SearchBlogComponent}
 ]
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
