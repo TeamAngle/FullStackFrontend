@@ -1,3 +1,47 @@
-#postTypes div{
-    
+h1 {
+    position: relative;
+    padding-top: 5vh;
+    background-color: rgb(245, 242, 238);
+    width: 100vw;
+    margin-left: -1vw;
+    padding-right: .5vw;
+    padding-bottom: 5vh;
+    text-align: center;
+    font-family: 'UnJamoBatang', sans-serif;
+    font-size: 5vh;
+}
+
+body {
+    margin-bottom:60px;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    background-color: rgb(245, 242, 238);
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -50vw;
+    left: 50%;
+    font-family: 'UnJamoBatang', sans-serif;
+}
+
+img {
+    height: 35vh;
+    width: 35vh;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.blogs {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    color: rgb(56, 26, 6);
+    text-decoration: none;
 }
