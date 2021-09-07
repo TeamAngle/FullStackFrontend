@@ -16,7 +16,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   title = 'employeemanagerapp';
   // public employees: Employee[];
   // public recipes: Recipe[];
-  public user: User = {name: 'Not Logged In', id: null, password: null};
+  public user: User = {name: 'Not Logged In', id: null, password: null, blogPostList: []};
   public users: User[];
   public blogs: BlogPost[];
 
@@ -30,6 +30,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     //this.getEmployees();
     //this.getRecipes();
     this.getUsers();
+    this.getCurrentUser();
     // this.getBlogPosts();
   }
 
@@ -79,17 +80,30 @@ export class AppComponent implements OnInit, AfterViewInit{
   }
 
 
-  public getUser(userId: number, cb): void {
+  public getUser(userId: number, cb?): void {
     this.userService.getUser(userId).subscribe(
       (response: User) => {
         this.user = response;
+        if(cb)
+          cb()
       },
       (error: HttpErrorResponse) => {
         alert(error.message)
       }
     )
-    
-    
+  }
+
+  public getCurrentUser(): void {
+    this.userService.getCurrentUser().subscribe(
+      session => {
+        if(session.userId == 0)
+          return;
+        this.getUser(session.userId);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message)
+      }
+    )
   }
 
   public usernameExists(name: string): boolean{
@@ -101,6 +115,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     }
     return false;
   }
+
   public getBlogPosts(): void {
     this.blogPostService.getBlogPosts().subscribe(
       (response: BlogPost[]) => {
@@ -111,6 +126,15 @@ export class AppComponent implements OnInit, AfterViewInit{
       }
     )
 
+  }
+
+  public setCurrentUser(userId: number, cb?): void {
+    this.userService.updateCurrentUser({id: 0, userId: userId}).subscribe(
+      session => {
+        if(cb)
+          cb()
+      }
+    )
   }
 
 }
