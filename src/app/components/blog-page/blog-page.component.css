@@ -54,6 +54,7 @@ h2 {
 h3 {
     margin-left: 10%;
     text-decoration: underline;
+    font-size: 3vh;
 }
 
 p {
@@ -61,5 +62,5 @@ p {
     margin-left: 10%;
     margin-right: 10%;
     padding-bottom: 20px;
-    font-size: 3vh;
+    font-size: 2.5vh;
 }

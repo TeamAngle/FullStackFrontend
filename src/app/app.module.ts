@@ -27,13 +27,15 @@ import { CreateBlogComponent } from './components/create-blog/create-blog.compon
 import { SearchBlogComponent } from './components/search-blog/search-blog.component';
 
 const approutes: Routes = [
-  {path: '', component: LoginComponent},
+  // {path: '', component: LoginComponent},
+  {path: '', component:BlogsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'thankyou', component: ThankyouComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'newuser', component: NewuserComponent},
   {path: 'userhome', component:UserHomeComponent},
-  {path: 'bloglist', component:BlogsComponent},
+  {path: 'login', component:BlogsComponent},
+  // {path: 'bloglist', component:BlogsComponent},
   {path: 'blog/:id', component:BlogPageComponent},
   {path: 'createblog', component:CreateBlogComponent},
   {path: 'searchblogs', component:SearchBlogComponent}
