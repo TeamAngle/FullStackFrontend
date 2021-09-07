@@ -14,7 +14,6 @@ export class FooterComponent implements OnInit {
   }
 
   getUserText(){
-    console.log(this.app.user)
     return this.app.user.name == "Not Logged In" ? "Login" : 'Logout: ' + this.app.user.name
   }
 
