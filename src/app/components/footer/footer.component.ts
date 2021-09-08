@@ -22,9 +22,10 @@ export class FooterComponent implements OnInit {
   onClick(){
     console.log('clicked link')
     if(this.app.user.name != "Not Logged In"){
-      this.app.setCurrentUser(0, ()=>{window.location.replace('')});
+      this.app.setCurrentUser(0, ()=>{alert('clicked while logged in'); window.location.replace('login')});
     } else {
-      window.location.replace('')
+      alert('not logged in');
+      window.location.replace('login')
     }
   }
 }
