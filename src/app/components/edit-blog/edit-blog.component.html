@@ -1,0 +1,33 @@
+<style>
+    @import url('http://fonts.cdnfonts.com/css/unjamobatang');
+</style>
+<app-header></app-header>
+<form class="inputForm">
+    <div class="title">
+        <label for="title">Post Title</label><br>
+        <input class="small-text" type="text" name="title" [(ngModel)]="title"><br><br>
+    </div>
+    <div class="image">
+        <label for="image">Image Url</label><br>
+        <input class="image-text" type="text" name="imageUrl" [(ngModel)]="imgUrl"><br><br>
+        <img src="{{imgUrl}}"/><br>
+    </div>
+    <div class="body">
+        <label for="body">Body</label><br>
+        <textarea rows="15" cols="70" id="multiLineInput" [(ngModel)]="body"></textarea><br><br>
+    </div>
+    <div class="recipe">
+        <label for="recipe">Recipe Instructions</label><br>
+        <textarea rows="5" cols="40" id="multiLineInput" [(ngModel)]="recipe"></textarea><br><br>
+    </div>
+    <div class="tags">
+        <label for="tags">Tags</label><br>
+        <input class="small-text" type="text" name="tags" [(ngModel)]="tags" (ngModelChange)="convertToLowerCase($event)"><br><br>
+    </div>
+    <div class="submit">
+        <input type="submit" name="submit" (click)="onSubmit()">
+    </div>
+</form>
+<app-footer></app-footer>  
+
+

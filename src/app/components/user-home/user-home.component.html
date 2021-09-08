@@ -1,9 +1,11 @@
 <app-header></app-header>
 <body>
-    <div id="bloglist">
+    <div *ngIf="this.currentUser" id="bloglist">
         <ul>
             <li id="userblogs" *ngFor="let blog of this.currentUser.blogPostList">
                 <a routerLink = "/blog/{{blog.id}}"><p>{{blog.title}}</p></a>
+                <button (click)="onDelete(blog)">X</button>
+                <button (click)="onEdit(blog)">...</button>
                 <img src="{{blog.imageUrl}}" alt="">
             </li>
         </ul>

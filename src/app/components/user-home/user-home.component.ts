@@ -17,7 +17,8 @@ export class UserHomeComponent implements OnInit {
 
   constructor(
     private userService:UserService, 
-    private app: AppComponent
+    private app: AppComponent,
+    private blogService:BlogPostService
     ) { }
 
   ngOnInit() {
@@ -45,6 +46,18 @@ export class UserHomeComponent implements OnInit {
         )
       }
     )
+  }
+
+  onDelete(blog:BlogPost){
+    console.log(blog)
+    this.blogService.deleteBlogPost(blog.id).subscribe(
+      post => console.log(post)
+    )
+  }
+
+  onEdit(blog:BlogPost){
+    console.log(blog)
+    window.location.replace(`/editblog/${blog.id}`)
   }
 
 }
