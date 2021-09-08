@@ -1,0 +1,77 @@
+.inputForm {
+    margin-bottom:60px;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    background-color: rgb(245, 242, 238);
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: -50vw;
+    left: 50%;
+    font-family: 'UnJamoBatang', sans-serif;
+}
+
+label {
+    margin-left: 10%;
+}
+
+.small-text {
+    height: 20px;
+    width: 65%;
+    position: absolute;
+    margin-left: 25%;
+}
+
+.image-text {
+    height: 20px;
+    width: 30%;
+    position: absolute;
+    margin-left: 25%;
+}
+
+textarea {
+    height: 10vh;
+    width: 65%;
+    position: absolute;
+    margin-left: 25%;
+    padding-bottom: 5%;
+    white-space: pre-wrap;
+}
+
+.title {
+    display: flex;
+    position: relative;
+}
+
+.image {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+}
+
+.body {
+    display: flex;
+    height: 20vh;
+    padding-bottom: 2%;
+}
+
+.recipe {
+    display: flex;
+    height: 20vh;
+    padding-bottom: 2%;
+}
+
+.tags {
+    display: flex;
+}
+
+.submit {
+    width: 10vh;
+    height: 20px;
+    padding-left: 50%;
+}
+
+img {
+    height: 30vh;
+}

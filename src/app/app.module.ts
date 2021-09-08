@@ -25,6 +25,7 @@ import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.component';
 import { CreateBlogComponent } from './components/create-blog/create-blog.component';
 import { SearchBlogComponent } from './components/search-blog/search-blog.component';
+import { EditBlogComponent } from './components/edit-blog/edit-blog.component';
 
 const approutes: Routes = [
   // {path: '', component: LoginComponent},
@@ -35,7 +36,7 @@ const approutes: Routes = [
   {path: 'newuser', component: NewuserComponent},
   {path: 'userhome', component:UserHomeComponent},
   {path: 'login', component:LoginComponent},
-  // {path: 'bloglist', component:BlogsComponent},
+  {path: 'editblog/:id', component:EditBlogComponent},
   {path: 'blog/:id', component:BlogPageComponent},
   {path: 'createblog', component:CreateBlogComponent},
   {path: 'searchblogs', component:SearchBlogComponent}
@@ -61,7 +62,8 @@ const approutes: Routes = [
     BlogPageComponent,
     UserSidebarComponent,
     CreateBlogComponent,
-    SearchBlogComponent
+    SearchBlogComponent,
+    EditBlogComponent
   ],
   imports: [
     BrowserModule,
