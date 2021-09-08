@@ -1,0 +1,42 @@
+body {
+    margin-bottom:60px;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    background-color: rgb(245, 242, 238);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: -50vw;
+    left: 50%;
+    font-family: 'UnJamoBatang', sans-serif;
+    font-size: 18px;
+}
+
+.tag-search {
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+}
+
+.search {
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.search-bar {
+    height: 20px;
+    width: 80vw;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+}
+
+
+a {
+    margin-left: 10%;
+    color: black;
+    text-decoration: underline;
+    font-size: 18px;
+}
