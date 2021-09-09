@@ -36,7 +36,8 @@ export class NewuserComponent implements OnInit {
     
     let user = <User> {
       name: this.name,
-      password: this.password
+      password: this.password,
+      email: this.email
     }
     console.log('creating user', user);
     this.app.addUser(user)

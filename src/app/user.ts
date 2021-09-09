@@ -4,5 +4,6 @@ export interface User {
     id: number;
     name: string;
     password: string;
-    blogPostList: BlogPost[];
+    blogPostList?: BlogPost[];
+    email: string;
 }
