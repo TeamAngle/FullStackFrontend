@@ -4,10 +4,10 @@
             <div class="bloglist" id="userblogs" *ngFor="let blog of this.currentUser.blogPostList">
                 <img src="{{blog.imageUrl}}" alt="">
                 <div class="details">
-                    <a class="title" routerLink = "/blog/{{blog.id}}"><span>{{blog.title}}</span></a>
+                    <a routerLink = "/blog/{{blog.id}}"><span>{{blog.title}}</span></a>
                     <div class="buttons">
-                        <button (click)="onDelete(blog)">X</button>
                         <button (click)="onEdit(blog)">...</button>
+                        <button (click)="onDelete(blog)">X</button>
                     </div>
                 </div>
             </div>
