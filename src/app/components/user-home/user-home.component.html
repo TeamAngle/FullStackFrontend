@@ -1,17 +1,17 @@
 <app-header></app-header>
-<body>
     <div *ngIf="this.currentUser" id="bloglist">
-        <ul>
+        <body>
             <div class="bloglist" id="userblogs" *ngFor="let blog of this.currentUser.blogPostList">
                 <img src="{{blog.imageUrl}}" alt="">
                 <div class="details">
-                    <a class="title" routerLink = "/blog/{{blog.id}}"><p>{{blog.title}}</p></a>
-                    <button (click)="onDelete(blog)">X</button>
-                    <button (click)="onEdit(blog)">...</button>
+                    <a class="title" routerLink = "/blog/{{blog.id}}"><span>{{blog.title}}</span></a>
+                    <div class="buttons">
+                        <button (click)="onDelete(blog)">X</button>
+                        <button (click)="onEdit(blog)">...</button>
+                    </div>
                 </div>
             </div>
-        </ul>
+        </body>
     </div>
     <app-user-sidebar [userImage] = "userImage"></app-user-sidebar>  
-</body>
 <app-footer></app-footer>
