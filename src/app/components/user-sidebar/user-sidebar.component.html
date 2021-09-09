@@ -2,10 +2,10 @@
     <!-- <span><img src="#" alt="userphoto"></span>  -->
     <span><img src={{getImageUrl()}}
          alt="userphoto" (click)="onClick()"></span>
-    <div *ngIf="showChangeImage">
+    <div class="change-photo" *ngIf="showChangeImage">
         <input type="text" name="imageUrl"  [(ngModel)]=changedImageUrl>
-        <button (click)="onChangeImage()">Confirm</button>
-        <button (click)="showChangeImage = false">X</button>
+        <button type="confirm" id="confirmButton" (click)="onChangeImage()">Confirm</button>
+        <button id="exitButton" (click)="showChangeImage = false">X</button>
     </div> 
     <span class="username"> {{ app.user.name }}</span> <!--this will change to user name that is entered at login-->
 </div>

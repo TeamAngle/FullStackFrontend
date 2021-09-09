@@ -34,3 +34,26 @@ img {
     justify-content: center;
     color: rgb(48, 25, 4);
 }
+
+.change-photo {
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    background-color: rgb(245, 238, 229);
+}
+
+#confirmButton {
+    margin-left: 1%;
+    background-color: rgb(245, 238, 229);
+    border: none;
+}
+
+#exitButton {
+    margin-left: 1%;
+    background-color: rgb(233, 206, 166);
+    border: none;
+}
+
