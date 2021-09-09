@@ -14,6 +14,7 @@ import { User } from 'src/app/user';
 export class UserHomeComponent implements OnInit {
   blogList: BlogPost[];
   currentUser: User;
+  userImage: string = 'https://static.vecteezy.com/system/resources/thumbnails/000/661/657/small_2x/creative-lime-slice-popsicle.jpg';
 
   constructor(
     private userService:UserService, 
@@ -41,7 +42,7 @@ export class UserHomeComponent implements OnInit {
             user => {
               this.currentUser = user;
               this.app.user = user;
-              console.log(this.currentUser)
+              this.userImage = user.userImage ? user.userImage : this.userImage;
             }
         )
       }

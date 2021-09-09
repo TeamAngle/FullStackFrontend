@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
@@ -7,7 +7,8 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./user-sidebar.component.css']
 })
 export class UserSidebarComponent implements OnInit {
-
+  @Input() userImage;
+  
   constructor(public app: AppComponent) { }
 
   ngOnInit(): void {

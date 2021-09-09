@@ -6,4 +6,5 @@ export interface User {
     password: string;
     blogPostList?: BlogPost[];
     email: string;
+    userImage?: string;
 }
