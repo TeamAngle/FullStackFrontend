@@ -16,7 +16,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   title = 'employeemanagerapp';
   // public employees: Employee[];
   // public recipes: Recipe[];
-  public user: User = {name: 'Not Logged In', id: null, password: null, blogPostList: []};
+  public user: User = {name: 'Not Logged In', id: null, password: null, blogPostList: [], email:""};
   public users: User[];
   public blogs: BlogPost[];
 
@@ -121,9 +121,9 @@ export class AppComponent implements OnInit, AfterViewInit{
       (response: BlogPost[]) => {
         this.blogs = response;
       },
-      (error: HttpErrorResponse) => {
-        alert(error.message)
-      }
+      // (error: HttpErrorResponse) => {
+      //   alert(error.message)
+      // }
     )
 
   }
