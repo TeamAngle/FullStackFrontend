@@ -1,22 +1,53 @@
+
 body {
-    display: flex;
-    position: fixed;
+    margin-top: 130px;
+    padding-bottom: 60px;
+    margin-bottom: 56px;
+    margin-left: -6px;
     background-color: rgb(245, 242, 238);
-    height: 100vh;
-    width: 70%;
+    height: 100%;
+    width: 76%;
     left: 0;
+    font-family: 'UnJamoBatang', sans-serif;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#bloglist div{
-display: inline-block;
+.bloglist {
+    margin-left: 11%;
+    margin-top: 5%;
 }
-#userinfo div{
-display: inline-block;
+
+img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
 }
-#userlist ul{
-    list-style: none;
-    display: inline;
+
+a {
+    color: rgb(48, 25, 4);
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 3px;
 }
-#userblogs{
-    list-style: none;
+
+.details {
+    display: flex;
+    background-color: white;
+    margin-top: -4px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* justify-content: center; */
+}
+
+.buttons {
+    margin-left: auto;
+}
+
+button {
+    color: rgb(48, 25, 4);
+    background-color: white;
+    border: none;
+    font-size: 12px;
 }
