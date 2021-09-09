@@ -21,4 +21,15 @@ li{
 a {
     text-decoration: none;
     color: rgb(245, 238, 229);
+    font-family: 'UnJamoBatang', sans-serif;
+}
+
+button {
+    float: right;
+    margin-right: 5%;
+    background-color: #8ca37e;
+    color: rgb(245, 238, 229);
+    border: none;
+    font-size: 17px;
+    font-family: inherit;
 }
