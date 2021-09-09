@@ -1,13 +1,19 @@
 <app-header></app-header>
-<label for="searchByTag" name="searchByTag">Search By Tag</label>
-    <input type="checkbox" name="searchByTag" [(ngModel)]="searchByTag" (ngModelChange)="searchText = ''">
-<label for="searchBar">Search post <strong>{{searchByTag ? 'Tag': 'Title'}}</strong></label>
-<input type="text" name="searchbar" [(ngModel)]="searchText" (ngModelChange)="getMatchedBlogPosts()">
-<div *ngIf="matchedBlogPosts.length > 0">
-    <ol>
-        <ul *ngFor="let match of matchedBlogPosts">
-            <a routerLink="/blog/{{match.id}}">{{match.title}}</a>
-        </ul>
-    </ol>
-</div>
+<body>
+    <div class="tag-search">
+        <input class="checkbox" type="checkbox" name="searchByTag" [(ngModel)]="searchByTag" (ngModelChange)="searchText = ''">
+        <label for="searchByTag" name="searchByTag">Search By Tag</label>
+    </div>
+    <div class="search">
+        <label for="searchBar">Search post <strong>{{searchByTag ? 'Tag': 'Title'}}</strong></label>
+        <input class="search-bar" type="text" name="searchbar" [(ngModel)]="searchText" (ngModelChange)="getMatchedBlogPosts()">
+    </div>
+    <div class="results" *ngIf="matchedBlogPosts.length > 0">
+        <ol>
+            <ul *ngFor="let match of matchedBlogPosts">
+                <a routerLink="/blog/{{match.id}}">{{match.title}}</a>
+            </ul>
+        </ol>
+    </div>
+</body>
 <app-footer></app-footer>
