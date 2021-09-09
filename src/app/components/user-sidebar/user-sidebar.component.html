@@ -1,5 +1,11 @@
 <div id="userinfo">
     <!-- <span><img src="#" alt="userphoto"></span>  -->
-    <span><img src="https://static.vecteezy.com/system/resources/thumbnails/000/661/657/small_2x/creative-lime-slice-popsicle.jpg" alt="userphoto"></span> 
+    <span><img src={{getImageUrl()}}
+         alt="userphoto" (click)="onClick()"></span>
+    <div *ngIf="showChangeImage">
+        <input type="text" name="imageUrl"  [(ngModel)]=changedImageUrl>
+        <button (click)="onChangeImage()">Confirm</button>
+        <button (click)="showChangeImage = false">X</button>
+    </div> 
     <span class="username"> {{ app.user.name }}</span> <!--this will change to user name that is entered at login-->
 </div>
