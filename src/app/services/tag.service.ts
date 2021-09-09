@@ -8,7 +8,7 @@ import { Tag } from '../tag';
   providedIn: 'root'
 })
 export class TagService {
-  private apiServerUrl = 'us-cdbr-east-04.cleardb.com';//environment.apiBaseUrl;
+  private apiServerUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 
