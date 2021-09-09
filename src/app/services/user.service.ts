@@ -9,7 +9,7 @@ import { SessionObject } from '../sessionObject';
   providedIn: 'root'
 })
 export class UserService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = 'us-cdbr-east-04.cleardb.com';//environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 

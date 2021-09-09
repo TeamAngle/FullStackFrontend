@@ -8,7 +8,7 @@ import { BlogPost } from '../blogPost';
   providedIn: 'root'
 })
 export class BlogPostService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = 'us-cdbr-east-04.cleardb.com';//environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 
