@@ -61,4 +61,10 @@ export class UserHomeComponent implements OnInit {
     window.location.replace(`/editblog/${blog.id}`)
   }
 
+  public updateUser(){
+    this.userService.updateUser(this.currentUser, this.currentUser.id).subscribe(
+     user => this.currentUser = user
+    )
+  }
+
 }
