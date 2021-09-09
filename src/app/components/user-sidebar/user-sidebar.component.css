@@ -1,7 +1,7 @@
 #userinfo {
     position: fixed;
     right: 0;
-    background-color: rgb(187, 111, 49);
+    background-color: rgb(233, 206, 166);
     height: 100vh;
     width: 30%;
     color: rgb(245, 238, 229);
@@ -10,4 +10,21 @@
 .username {
     margin-top: 10%;
     font-size: 200%;
+}
+
+img {
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.username {
+    display: flex;
+    justify-content: center;
+    color: rgb(48, 25, 4);
 }
