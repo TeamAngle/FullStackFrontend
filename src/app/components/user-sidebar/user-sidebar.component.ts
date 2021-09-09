@@ -23,7 +23,8 @@ export class UserSidebarComponent implements OnInit {
 
   onChangeImage(){
     this.userHome.currentUser.userImage = this.changedImageUrl.length > 0 ? this.changedImageUrl : null;
-    this.userHome.updateUser()
+    this.userHome.updateUser();
+    this.showChangeImage = false;
   }
 
   getImageUrl(){
