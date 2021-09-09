@@ -2,12 +2,14 @@
 <body>
     <div *ngIf="this.currentUser" id="bloglist">
         <ul>
-            <li id="userblogs" *ngFor="let blog of this.currentUser.blogPostList">
-                <a routerLink = "/blog/{{blog.id}}"><p>{{blog.title}}</p></a>
-                <button (click)="onDelete(blog)">X</button>
-                <button (click)="onEdit(blog)">...</button>
+            <div class="bloglist" id="userblogs" *ngFor="let blog of this.currentUser.blogPostList">
                 <img src="{{blog.imageUrl}}" alt="">
-            </li>
+                <div class="details">
+                    <a class="title" routerLink = "/blog/{{blog.id}}"><p>{{blog.title}}</p></a>
+                    <button (click)="onDelete(blog)">X</button>
+                    <button (click)="onEdit(blog)">...</button>
+                </div>
+            </div>
         </ul>
     </div>
     <app-user-sidebar [userImage] = "userImage"></app-user-sidebar>  
