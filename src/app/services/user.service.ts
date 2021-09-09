@@ -14,31 +14,31 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   public getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.apiServerUrl}/userController/read`);
+    return this.http.get<User[]>(`${this.apiServerUrl}/userController/read`, { responseType: 'text' as 'json' });
   }
 
   public getUser(userId: number): Observable<User> {
-    return this.http.get<User>(`${this.apiServerUrl}/userController/read/${userId}`)
+    return this.http.get<User>(`${this.apiServerUrl}/userController/read/${userId}`, { responseType: 'text' as 'json' })
   }
 
   public updateCurrentUser(session: SessionObject): Observable<SessionObject> {
-    return this.http.put<SessionObject>(`${this.apiServerUrl}/sessionController/update`, session);
+    return this.http.put<SessionObject>(`${this.apiServerUrl}/sessionController/update`, session, { responseType: 'text' as 'json' });
   }
 
   public getCurrentUser(): Observable<SessionObject> {
-    return this.http.get<SessionObject>(`${this.apiServerUrl}/sessionController/read`);
+    return this.http.get<SessionObject>(`${this.apiServerUrl}/sessionController/read`, { responseType: 'text' as 'json' });
   }
 
   public addUser(user: User): Observable<User> {
-    return this.http.post<User>(`${this.apiServerUrl}/userController/create`, user)
+    return this.http.post<User>(`${this.apiServerUrl}/userController/create`, user, { responseType: 'text' as 'json' })
   }
 
   public updateUser(user: User, userId: number): Observable<User> {
-    return this.http.put<User>(`${this.apiServerUrl}/userController/update/${userId}`, user);
+    return this.http.put<User>(`${this.apiServerUrl}/userController/update/${userId}`, user, { responseType: 'text' as 'json' });
   }
 
   public deleteUser(userId: number) : Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/userController/delete/${userId}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/userController/delete/${userId}`, { responseType: 'text' as 'json' });
   }
 
 }
