@@ -6,12 +6,12 @@ import { User } from '../user';
   providedIn: 'root'
 })
 export class DataService {
-  private userSource = new BehaviorSubject<User>({name: 'Not Logged In', id: null, password: null});
-  currentUser = this.userSource.asObservable();
+  // private userSource = new BehaviorSubject<User>({name: 'Not Logged In', id: null, password: null});
+  // currentUser = this.userSource.asObservable();
 
-  constructor() { }
+  // constructor() { }
 
-  changeUser(newUser: User){
-    this.userSource.next(newUser);
-  }
+  // changeUser(newUser: User){
+  //   this.userSource.next(newUser);
+  // }
 }
