@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
      if(this.app.users[i].name == this.username &&
       this.app.users[i].password == this.password){
         this.app.user = this.app.users[i];
-        alert("Found that ass! You're the real deal!");
+        alert("Welcome!");
         console.log(this.app.user);
         this.app.setCurrentUser(this.app.users[i].id, ()=>{window.location.replace('/userhome')})
         return;

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BlogPost } from 'src/app/blogPost';
 import { BlogPostService } from 'src/app/services/blog-post.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-blog-page',
@@ -10,9 +11,10 @@ import { BlogPostService } from 'src/app/services/blog-post.service';
 })
 export class BlogPageComponent implements OnInit {
   navigated = false;
-  blogPost: BlogPost
+  blogPost: BlogPost;
+  username: String;
 
-  constructor(private route: ActivatedRoute, private blogPostService:BlogPostService) { }
+  constructor(private route: ActivatedRoute, private blogPostService:BlogPostService, private userService:UserService) { }
 
   ngOnInit(): void {
     this.route.params.forEach(
